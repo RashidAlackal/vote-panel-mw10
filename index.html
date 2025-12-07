@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Machine Demo</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="ward">Ward</button>
+        <button class="tab" data-tab="block">Block</button>
+        <button class="tab" data-tab="district">District</button>
+    </div>
+
+    <!-- Ward Ballot -->
+    <div id="ward-ballot" class="ballot" style="display: none;">
+        <div class="header">
+            <span class="status">Ready <span class="dot"></span></span>
+            <span class="unit">Ballot Unit 1</span>
+        </div>
+        <div class="row">
+            <div class="number">1</div>
+            <div class="name-container">
+                <div class="name">എ.കെ നസീബ</div>
+                <img src="assets/ladder3.svg" class="symbol" alt="Symbol">
+            </div>
+            <div class="light"></div>
+            <button class="vote-btn"></button>
+        </div>
+        <div class="row"><div class="number">2</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">3</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">4</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">5</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">6</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">7</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">8</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">9</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">10</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+    </div>
+
+    <!-- Block Ballot -->
+    <div id="block-ballot" class="ballot" style="display: none;">
+        <div class="header">
+            <span class="status">Ready <span class="dot"></span></span>
+            <span class="unit">Ballot Unit 1</span>
+        </div>
+        <div class="row">
+            <div class="number">1</div>
+            <div class="name-container">
+                <div class="name">⁠അൻവർ സാദത്ത്</div>
+                <img src="assets/ladder2.svg" class="symbol" alt="Symbol">
+            </div>
+            <div class="light"></div>
+            <button class="vote-btn"></button>
+        </div>
+        <div class="row"><div class="number">2</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">3</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div> <!-- assets/candid2.png -->
+        <div class="row"><div class="number">4</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">5</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">6</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">7</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">8</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">9</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">10</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+    </div>
+
+    <!-- District Ballot (Default visible)-->
+    <div id="district-ballot" class="ballot">
+        <div class="header">
+            <span class="status">Ready <span class="dot"></span></span>
+            <span class="unit">Ballot Unit 1</span>
+        </div>
+        <div class="row"><div class="number">1</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">2</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row">
+            <div class="number">3</div>
+            <div class="name-container">
+                <div class="name">ഹനീഫ മൂന്നിയൂർ</div>
+                <img src="assets/ladder1.svg" class="symbol" alt="Symbol">
+            </div>
+                <div class="light"></div>
+            <button class="vote-btn"></button>
+        </div>
+        <div class="row"><div class="number">4</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">5</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">6</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">7</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">8</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">9</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+        <div class="row"><div class="number">10</div><div class="name"></div><div class="light"></div><button class="vote-btn disabled" disabled></button></div>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="successScreen" class="success-screen">
+        <div class="success-circle"></div>
+        <div class="success-message">
+            <div class="checkmark">✓</div>
+            <div class="success-text">Vote Successfully Completed</div>
+            <div class="malayalam-text">വോട്ട് വിജയകരമായി നടന്നു</div>
+        </div>
+    </div>
+
+    <!-- Voted Screen -->
+    <div id="votedScreen" class="voted-screen">
+        <div class="voted-container">
+            <div class="candidate-photo">
+                <img src="assets/candid.png" alt="Candidate" class="photo">
+                <div class="voted-badge">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    VOTED
+                </div>
+            </div>
+            <div class="candidate-info">
+                <div class="candidate-name">ഹനീഫ മൂന്നിയൂർ</div>
+                <div class="candidate-english-name">Munniyoor</div>
+                <div class="ward-info">
+                    <span>WARD : 10</span>
+                    <img src="ladder.svg" alt="Ladder" class="ladder-icon">
+                </div>
+            </div>
+        </div>
+                <button id="voteAgainBtn" class="vote-again-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.5 2v6h-6"></path>
+                        <path d="M21.34 15.57a10 10 0 1 1-.57-8.38"></path>
+                    </svg>
+                    Vote Again
+                </button>
+    </div>
+
+    <!-- WhatsApp Contact Button -->
+    <a href="https://wa.me/918281958694?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20the%20voting%20machine%20demo" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span>Contact for Voting Machine Demo</span>
+    </a>
+
+    <!-- JavaScript File -->
+    <script src="voting.js"></script>
+</body>
+</html>
